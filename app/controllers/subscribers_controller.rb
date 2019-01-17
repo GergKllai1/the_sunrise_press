@@ -1,9 +1,5 @@
 class SubscribersController < ApplicationController
 
-    def new
-        
-    end
-
     def create
         user = User.find_by_id(current_user.id)
         customer = Stripe::Customer.create(
